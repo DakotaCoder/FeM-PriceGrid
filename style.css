@@ -1,0 +1,180 @@
+:root {
+    /* Primary */
+    --color-cyan: hsl(179, 62%, 43%);
+    --color-cyan-light: hsl(179, 47%, 52%, 1);
+    --color-yellow: hsl(71, 73%, 54%);
+    /* Neutral */
+    --color-light-grey: hsl(204, 43%, 93%);
+    --color-greyish-blue: hsl(218, 22%, 67%);
+    font-size: 62.5%;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    padding: 2.5rem;
+    font-family: 'Karla', sans-serif;
+    font-size: 1.2rem;
+    background-color: var(--color-light-grey);
+    color: white;
+    margin-top: 10rem;
+}
+
+ul {
+    list-style: none;
+    line-height: 1.7;
+    opacity: .8;
+    font-size: 1rem;
+    letter-spacing: .04rem;
+    font-weight: 400;
+}
+
+h1, h2 {
+    margin-bottom: 1.2rem;
+}
+
+h1 {
+    color: var(--color-cyan);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.hassleText {
+    font-size: 1.3rem;
+    color: var(--color-yellow);
+    font-weight: 400;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+p {
+    line-height: 1.6;
+}
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    max-width: 30rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.wrapper>* {
+    padding: 2.5rem 3rem;
+}
+
+.cardTop {
+    grid-column: 1fr;
+    background-color: white;
+    color: var(--color-greyish-blue);
+}
+
+.cardSub h2 {
+    margin-bottom: .5rem;
+}
+
+.cardSub {
+    grid-column: 1fr;
+    background-color: var(--color-cyan);
+}
+
+.subWrap {
+    display: flex;
+    align-items: center;
+    padding-top: .8rem;
+}
+
+.dollar {
+    font-size: 2.8rem;
+    padding-right: .7rem;
+
+}
+
+.perMonth {
+    font-size: 1.2rem;
+    opacity: .4;
+}
+
+.cardSub p {
+    font-size: 1.1rem;
+    padding-bottom: .5rem;
+    margin-top: -.8rem;
+
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 2px 15px rgb(0, 0, 0, .3);
+    background-color: var(--color-yellow);
+    margin-top: 1.5rem;
+    cursor: pointer;
+    outline: none;
+}
+
+button a {
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.cardReasons {
+    grid-column: 1fr;
+    background-color: var(--color-cyan-light);
+}
+
+
+.attribution {
+display: flex;
+justify-content: space-evenly;
+flex-direction: column;
+text-align: center;
+color: rgb(39, 133, 50);
+font-size: 1rem;
+/* opacity: .7; */
+}
+
+.attribution a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+@media (min-width: 40rem) {
+    .wrapper {
+        display: grid;
+        max-width: 90rem;
+        grid-template-columns: .5fr .5fr;
+        grid-template-columns: auto auto;
+    }
+    .cardTop {
+        grid-column: 1 / 3;
+    }
+
+    .attribution {
+        flex-direction: row;
+        }
+}
